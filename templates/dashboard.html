@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome, {{ current_user.username }} 🌻</h1>
+
+<form method="POST">
+    <input type="text" name="content" placeholder="New Task..." required>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+<ul class="task-list">
+    {% for task in tasks %}
+    <li class="task-item {% if task.completed %}completed{% endif %}">
+        <span>{{ task.content }}</span>
+        <div class="task-actions">
+            <a href="{{ url_for('complete', id=task.id) }}" class="btn btn-success">✔</a>
+            <a href="{{ url_for('edit', id=task.id) }}" class="btn btn-warning">✏</a>
+            <a href="{{ url_for('delete', id=task.id) }}" class="btn btn-danger">🗑</a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{{ url_for('logout') }}" class="btn btn-secondary">Logout</a>
+
+<style>
+    .task-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .task-item {
+        background: #f7f9fc;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .task-item.completed span {
+        text-decoration: line-through;
+        color: gray;
+    }
+    .task-actions {
+        display: flex;
+        gap: 6px; /* spacing between buttons */
+    }
+    .task-actions .btn {
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-success { background: #6c757d; color: white; }
+    .btn-warning { background: #2a5298; color: white; }
+    .btn-danger { background: crimson; color: white; }
+</style>
+{% endblock %}

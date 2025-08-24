@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit Task</h1>
+<form method="POST">
+    <input type="text" name="content" value="{{ task.content }}" required style="width:100%;padding:10px;margin:8px 0;">
+    <button type="submit" class="btn btn-primary" style="width:100%;">Update</button>
+</form>
+<a href="{{ url_for('dashboard') }}" class="btn btn-secondary" style="margin-top:10px;">Back</a>
+{% endblock %}
