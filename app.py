@@ -159,7 +159,9 @@ def logout():
 
 
 # ----------------- DB INIT -----------------
+with app.app_context():
+    db.create_all()   # Always ensure tables exist
+
 if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()   # Always ensure tables exist
     app.run(host="0.0.0.0", port=5000)
+
