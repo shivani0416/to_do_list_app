@@ -160,7 +160,6 @@ def logout():
 
 # ----------------- DB INIT -----------------
 if __name__ == "__main__":
-    if not os.path.exists("todo.db"):
-        with app.app_context():
-            db.create_all()
-    app.run(debug=True)
+    with app.app_context():
+        db.create_all()   # Always ensure tables exist
+    app.run(host="0.0.0.0", port=5000)
