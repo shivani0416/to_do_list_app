@@ -1,73 +1,44 @@
-To-Do List Web App 📝✨
+To-Do List Web App 📝
 
-A simple yet stylish To-Do List web app built with Flask, SQLite, and Flask-Login.
-Users can register, log in, and manage personal tasks with add, edit, complete & delete features.
-It comes with a clean UI, flash messages, and secure authentication.
+A Flask-based To-Do List web application with user authentication. Users can register, log in, and manage their personal tasks with options to add, edit, complete, and delete tasks. Designed with clean UI and simple logic, making it suitable for learning and practical use.
 
 🚀 Features
 
-🔐 User Registration & Login
+User registration & login (Flask-Login)
 
-➕ Add new tasks
+Add, edit, and delete tasks
 
-✏️ Edit existing tasks
+Mark tasks as complete/incomplete
 
-✅ Mark tasks as complete/incomplete
+Flash messages for actions
 
-❌ Delete tasks
+Simple and responsive UI
 
-🎨 Clean responsive UI with flash messages
-
-🛠️ Tech Stack
+🛠 Tech Stack
 
 Python (Flask)
 
-SQLite (Database)
+SQLite
 
-Flask-Login (Authentication)
+Flask-Login
 
-HTML + Inline CSS
+HTML & CSS
 
-⚙️ Setup Instructions
-
-Clone this repository:
-
+⚙️ How to Run
 git clone https://github.com/your-username/todo-flask-app.git
 cd todo-flask-app
-
-
-Create a virtual environment:
-
 python -m venv venv
-source venv/bin/activate   # On Mac/Linux
-venv\Scripts\activate      # On Windows
-
-
-Install dependencies:
-
+venv\Scripts\activate   # Windows
 pip install -r requirements.txt
-
-
-Run the app:
-
 python app.py
 
 
-Open in browser:
-
-http://127.0.0.1:5000
-
-📸 Screenshots
-Dashboard Example
-
-(Add your screenshot here)
+Open: http://127.0.0.1:5000
 
 📂 Project Structure
-.
 ├── app.py
 ├── requirements.txt
-├── .gitignore
-├── todo.db (auto-generated)
+├── todo.db
 ├── templates/
 │   ├── base.html
 │   ├── login.html
@@ -75,16 +46,16 @@ Dashboard Example
 │   ├── dashboard.html
 │   └── edit.html
 
-💡 Future Enhancements
+🎯 Use Case
 
-Dark mode 🌙
+Beginner Flask project
 
-Due dates & reminders ⏰
+Academic mini/major project
 
-Task categories 📂
+Student learning reference
 
-Deploy on Heroku/Render 🚀
+Simple task management system
 
 👩‍💻 Author
 
-Made with ❤️ by Shivani
+Shivani Kawade
