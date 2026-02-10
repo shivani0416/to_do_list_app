@@ -25,7 +25,7 @@ Flask-Login
 HTML & CSS
 
 ⚙️ How to Run
-git clone https://github.com/your-username/to_do_list_app.git
+git clone " https://github.com/shivani0416/to_do_list_app "
 cd todo-flask-app
 python -m venv venv
 venv\Scripts\activate   # Windows
